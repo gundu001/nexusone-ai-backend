@@ -1,3 +1,19 @@
 package ai.nexusone.dto;
+
 import jakarta.validation.constraints.NotBlank;
-public record DeploymentRequest(@NotBlank String applicationName,@NotBlank String environment,@NotBlank String provider,@NotBlank String version){}
+
+public class DeploymentRequest {
+    @NotBlank(message = "Repository name is required.")
+    private String repositoryName;
+
+    @NotBlank(message = "Environment is required.")
+    private String environment;
+
+    public DeploymentRequest() {
+    }
+
+    public String getRepositoryName() { return repositoryName; }
+    public void setRepositoryName(String repositoryName) { this.repositoryName = repositoryName; }
+    public String getEnvironment() { return environment; }
+    public void setEnvironment(String environment) { this.environment = environment; }
+}
