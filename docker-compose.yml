@@ -1,0 +1,7 @@
+services:
+  nexusone-backend:
+    build: .
+    ports: ["8080:8080"]
+    volumes: ["nexusone-data:/app/data"]
+volumes:
+  nexusone-data:
