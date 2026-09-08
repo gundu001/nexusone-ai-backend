@@ -24,8 +24,7 @@ public class RiskAnalysisController {
             throws Exception {
 
         RiskAnalysisResult result =
-                riskAnalysisService
-                        .analyzeRisk(repoName);
+                riskAnalysisService.analyzeRisk(repoName);
 
         return ResponseEntity.ok(result);
     }

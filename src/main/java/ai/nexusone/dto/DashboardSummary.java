@@ -2,76 +2,131 @@ package ai.nexusone.dto;
 
 public class DashboardSummary {
 
-    private Long totalRepositories;
+    private long totalRepositories;
 
-    private Long totalScans;
+    private long totalScans;
 
-    private Long totalRiskAnalyses;
+    private long totalRiskAnalyses;
 
-    private Double averageRiskScore;
+    private double averageRiskScore;
 
-    private Long highRiskRepositories;
+    private long highRiskRepositories;
 
-    private Long mediumRiskRepositories;
+    private long mediumRiskRepositories;
 
-    private Long lowRiskRepositories;
+    private long lowRiskRepositories;
+
+    private long safeToDeploy;
+
+    private long deployWithCaution;
+
+    private long manualReviewRequired;
 
     public DashboardSummary() {
     }
 
-    public Long getTotalRepositories() {
+    public long getTotalRepositories() {
         return totalRepositories;
     }
 
-    public void setTotalRepositories(Long totalRepositories) {
+    public void setTotalRepositories(
+            long totalRepositories) {
+
         this.totalRepositories = totalRepositories;
     }
 
-    public Long getTotalScans() {
+    public long getTotalScans() {
         return totalScans;
     }
 
-    public void setTotalScans(Long totalScans) {
+    public void setTotalScans(
+            long totalScans) {
+
         this.totalScans = totalScans;
     }
 
-    public Long getTotalRiskAnalyses() {
+    public long getTotalRiskAnalyses() {
         return totalRiskAnalyses;
     }
 
-    public void setTotalRiskAnalyses(Long totalRiskAnalyses) {
+    public void setTotalRiskAnalyses(
+            long totalRiskAnalyses) {
+
         this.totalRiskAnalyses = totalRiskAnalyses;
     }
 
-    public Double getAverageRiskScore() {
+    public double getAverageRiskScore() {
         return averageRiskScore;
     }
 
-    public void setAverageRiskScore(Double averageRiskScore) {
+    public void setAverageRiskScore(
+            double averageRiskScore) {
+
         this.averageRiskScore = averageRiskScore;
     }
 
-    public Long getHighRiskRepositories() {
+    public long getHighRiskRepositories() {
         return highRiskRepositories;
     }
 
-    public void setHighRiskRepositories(Long highRiskRepositories) {
-        this.highRiskRepositories = highRiskRepositories;
+    public void setHighRiskRepositories(
+            long highRiskRepositories) {
+
+        this.highRiskRepositories =
+                highRiskRepositories;
     }
 
-    public Long getMediumRiskRepositories() {
+    public long getMediumRiskRepositories() {
         return mediumRiskRepositories;
     }
 
-    public void setMediumRiskRepositories(Long mediumRiskRepositories) {
-        this.mediumRiskRepositories = mediumRiskRepositories;
+    public void setMediumRiskRepositories(
+            long mediumRiskRepositories) {
+
+        this.mediumRiskRepositories =
+                mediumRiskRepositories;
     }
 
-    public Long getLowRiskRepositories() {
+    public long getLowRiskRepositories() {
         return lowRiskRepositories;
     }
 
-    public void setLowRiskRepositories(Long lowRiskRepositories) {
-        this.lowRiskRepositories = lowRiskRepositories;
+    public void setLowRiskRepositories(
+            long lowRiskRepositories) {
+
+        this.lowRiskRepositories =
+                lowRiskRepositories;
+    }
+
+    public long getSafeToDeploy() {
+        return safeToDeploy;
+    }
+
+    public void setSafeToDeploy(
+            long safeToDeploy) {
+
+        this.safeToDeploy = safeToDeploy;
+    }
+
+    public long getDeployWithCaution() {
+        return deployWithCaution;
+    }
+
+    public void setDeployWithCaution(
+            long deployWithCaution) {
+
+        this.deployWithCaution =
+                deployWithCaution;
+    }
+
+    public long getManualReviewRequired() {
+        return manualReviewRequired;
+    }
+
+    public void setManualReviewRequired(
+            long manualReviewRequired) {
+
+        this.manualReviewRequired =
+                manualReviewRequired;
     }
 }

@@ -11,6 +11,8 @@ public class RiskAnalysisResult {
 
     private String severity;
 
+    private String recommendation;
+
     private List<String> findings =
             new ArrayList<>();
 
@@ -39,6 +41,15 @@ public class RiskAnalysisResult {
 
     public void setSeverity(String severity) {
         this.severity = severity;
+    }
+
+    public String getRecommendation() {
+        return recommendation;
+    }
+
+    public void setRecommendation(
+            String recommendation) {
+        this.recommendation = recommendation;
     }
 
     public List<String> getFindings() {

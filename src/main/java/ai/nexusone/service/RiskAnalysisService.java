@@ -42,7 +42,10 @@ public class RiskAnalysisService {
         List<String> findings =
                 new ArrayList<>();
 
-        // Rule 1 - Missing pom.xml
+        // -----------------------------
+        // Risk Rules
+        // -----------------------------
+
         if (!scanResult.isPomFilePresent()) {
 
             riskScore += 30;
@@ -52,7 +55,6 @@ public class RiskAnalysisService {
             );
         }
 
-        // Rule 2 - Missing Application Config
         if (!scanResult.isApplicationConfigPresent()) {
 
             riskScore += 20;
@@ -62,7 +64,6 @@ public class RiskAnalysisService {
             );
         }
 
-        // Rule 3 - Missing Dockerfile
         if (!scanResult.isDockerfilePresent()) {
 
             riskScore += 20;
@@ -72,7 +73,6 @@ public class RiskAnalysisService {
             );
         }
 
-        // Rule 4 - Missing README
         if (!scanResult.isReadmePresent()) {
 
             riskScore += 5;
@@ -82,7 +82,6 @@ public class RiskAnalysisService {
             );
         }
 
-        // Rule 5 - Missing Kubernetes Files
         if (!scanResult.isKubernetesFilesPresent()) {
 
             riskScore += 10;
@@ -94,7 +93,10 @@ public class RiskAnalysisService {
 
         riskResult.setRiskScore(riskScore);
 
+        // -----------------------------
         // Severity
+        // -----------------------------
+
         if (riskScore <= 20) {
 
             riskResult.setSeverity("LOW");
@@ -108,6 +110,29 @@ public class RiskAnalysisService {
             riskResult.setSeverity("HIGH");
         }
 
+        // -----------------------------
+        // Deployment Recommendation
+        // -----------------------------
+
+        String recommendation;
+
+        if (riskScore <= 20) {
+
+            recommendation = "SAFE_TO_DEPLOY";
+
+        } else if (riskScore <= 50) {
+
+            recommendation = "DEPLOY_WITH_CAUTION";
+
+        } else {
+
+            recommendation = "MANUAL_REVIEW_REQUIRED";
+        }
+
+        riskResult.setRecommendation(
+                recommendation
+        );
+
         if (findings.isEmpty()) {
 
             findings.add(
@@ -117,9 +142,9 @@ public class RiskAnalysisService {
 
         riskResult.setFindings(findings);
 
-        // ============================
-        // Persist Risk Analysis Result
-        // ============================
+        // -----------------------------
+        // Persist Result
+        // -----------------------------
 
         RiskAnalysisResultEntity entity =
                 new RiskAnalysisResultEntity();
@@ -133,6 +158,9 @@ public class RiskAnalysisService {
         entity.setSeverity(
                 riskResult.getSeverity());
 
+        entity.setRecommendation(
+                recommendation);
+
         entity.setFindings(
                 String.join(
                         ", ",
@@ -143,8 +171,6 @@ public class RiskAnalysisService {
                 LocalDateTime.now());
 
         riskRepository.save(entity);
-
-        // ============================
 
         return riskResult;
     }

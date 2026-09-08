@@ -18,6 +18,8 @@ public class RiskAnalysisResultEntity {
 
     private String severity;
 
+    private String recommendation;
+
     @Column(length = 2000)
     private String findings;
 
@@ -58,6 +60,15 @@ public class RiskAnalysisResultEntity {
         this.severity = severity;
     }
 
+    public String getRecommendation() {
+        return recommendation;
+    }
+
+    public void setRecommendation(
+            String recommendation) {
+        this.recommendation = recommendation;
+    }
+
     public String getFindings() {
         return findings;
     }
@@ -70,7 +81,8 @@ public class RiskAnalysisResultEntity {
         return analysisTime;
     }
 
-    public void setAnalysisTime(LocalDateTime analysisTime) {
+    public void setAnalysisTime(
+            LocalDateTime analysisTime) {
         this.analysisTime = analysisTime;
     }
 }
