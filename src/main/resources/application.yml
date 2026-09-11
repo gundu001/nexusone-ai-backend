@@ -39,3 +39,9 @@ nexusone:
   github:
     token: ${GITHUB_TOKEN:}
     api-url: https://api.github.com
+  jenkins:
+    base-url: ${JENKINS_BASE_URL:http://localhost:8181}
+    username: gundusanthosh
+    api-token: 11d23f47ce5653e1eaca4e391872f53429
+    connect-timeout-seconds: 10
+    request-timeout-seconds: 30
