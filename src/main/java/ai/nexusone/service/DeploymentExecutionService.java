@@ -3,6 +3,7 @@ package ai.nexusone.service;
 import ai.nexusone.dto.DeploymentExecutionRequest;
 import ai.nexusone.dto.DeploymentExecutionResponse;
 import ai.nexusone.dto.JenkinsBuildResponse;
+import ai.nexusone.dto.DeploymentMetricsResponse;
 import ai.nexusone.entity.DeploymentExecutionEntity;
 import ai.nexusone.enums.DeploymentResult;
 import ai.nexusone.enums.DeploymentStatus;
@@ -92,4 +93,45 @@ public class DeploymentExecutionService {
                 entity.getCompletedAt(), message
         );
     }
+    @Transactional(readOnly = true)
+    public DeploymentMetricsResponse getMetrics() {
+
+        long totalDeployments =
+                repository.count();
+
+        long successfulDeployments =
+                repository.countByStatus(
+                        DeploymentStatus.SUCCESS);
+
+        long failedDeployments =
+                repository.countByStatus(
+                        DeploymentStatus.FAILED);
+
+        double successRate =
+                totalDeployments == 0
+                        ? 0
+                        : (successfulDeployments * 100.0)
+                        / totalDeployments;
+
+        return new DeploymentMetricsResponse(
+                totalDeployments,
+                successfulDeployments,
+                failedDeployments,
+                successRate);
+    }
+
+    @Transactional(readOnly = true)
+    public List<DeploymentExecutionResponse>
+    getRecentExecutions() {
+
+        return repository
+                .findTop10ByOrderByStartedAtDesc()
+                .stream()
+                .map(entity ->
+                        toResponse(
+                                entity,
+                                entity.getJenkinsMessage()))
+                .toList();
+    }
+
 }
