@@ -1,0 +1,1 @@
+package ai.nexusone.enums; public enum IncidentStatus { OPEN, INVESTIGATING, MITIGATED, RESOLVED }
