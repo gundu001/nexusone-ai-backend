@@ -1,0 +1,3 @@
+package ai.nexusone.repository;
+import ai.nexusone.entity.KnowledgeExperienceRecord; import ai.nexusone.enums.*; import org.springframework.data.domain.*; import org.springframework.data.jpa.repository.JpaRepository;
+public interface KnowledgeExperienceRepository extends JpaRepository<KnowledgeExperienceRecord,Long>{long countByStatus(KnowledgeStatus status);Page<KnowledgeExperienceRecord> findByTitleContainingIgnoreCaseOrProblemStatementContainingIgnoreCaseOrLessonsLearnedContainingIgnoreCase(String a,String b,String c,Pageable p);Page<KnowledgeExperienceRecord> findByCategory(KnowledgeCategory c,Pageable p);Page<KnowledgeExperienceRecord> findByStatus(KnowledgeStatus s,Pageable p);}

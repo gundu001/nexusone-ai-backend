@@ -1,0 +1,2 @@
+package ai.nexusone.enums;
+public enum KnowledgeCategory { INCIDENT, RELEASE, CHANGE, SECURITY, COST, OBSERVABILITY, RESILIENCE, GOVERNANCE, EXECUTION, LEARNING }
