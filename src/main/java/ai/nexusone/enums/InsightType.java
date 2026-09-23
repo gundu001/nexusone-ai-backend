@@ -1,0 +1,10 @@
+package ai.nexusone.enums;
+
+public enum InsightType {
+    RISK_PREDICTION,
+    PATTERN_DISCOVERY,
+    ANOMALY_DETECTION,
+    DECISION_GUIDANCE,
+    IMPACT_ANALYSIS,
+    ROOT_CAUSE_CORRELATION
+}
