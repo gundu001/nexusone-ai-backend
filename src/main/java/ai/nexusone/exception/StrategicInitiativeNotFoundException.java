@@ -1,0 +1,1 @@
+package ai.nexusone.exception; public class StrategicInitiativeNotFoundException extends RuntimeException { public StrategicInitiativeNotFoundException(Long id){super("Strategic initiative not found: "+id);} }

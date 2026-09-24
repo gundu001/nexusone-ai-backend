@@ -1,0 +1,3 @@
+package ai.nexusone.repository;
+import ai.nexusone.entity.StrategicInitiative; import ai.nexusone.enums.*; import org.springframework.data.domain.*; import org.springframework.data.jpa.repository.JpaRepository;
+public interface StrategicInitiativeRepository extends JpaRepository<StrategicInitiative,Long>{ long countByStatus(StrategicStatus status); Page<StrategicInitiative> findByStatus(StrategicStatus status,Pageable p); Page<StrategicInitiative> findByStrategicType(StrategicType type,Pageable p); Page<StrategicInitiative> findByTitleContainingIgnoreCaseOrBusinessObjectiveContainingIgnoreCaseOrRecommendationContainingIgnoreCase(String a,String b,String c,Pageable p); }
