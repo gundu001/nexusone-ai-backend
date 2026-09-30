@@ -1,0 +1,1 @@
+package ai.nexusone.exception; public class GeopoliticalIntelligenceNotFoundException extends RuntimeException{public GeopoliticalIntelligenceNotFoundException(Long id){super("Geopolitical intelligence report not found: "+id);}}
