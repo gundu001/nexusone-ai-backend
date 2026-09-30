@@ -15,13 +15,16 @@ spring:
       maximum-pool-size: 10
       minimum-idle: 2
       connection-timeout: 30000
-
+  logging:
+    level:
+      org.hibernate.SQL: DEBUG
+      org.hibernate.orm.jdbc.bind: TRACE
   jpa:
     hibernate:
       ddl-auto: update
 
     open-in-view: false
-    show-sql: false
+    show-sql: true
 
     properties:
       hibernate:
