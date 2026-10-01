@@ -1,0 +1,41 @@
+package ai.nexusone.dto;
+
+import ai.nexusone.enums.DigitalBoardMemberPriority;
+import ai.nexusone.enums.DigitalBoardMemberStatus;
+import java.time.LocalDateTime;
+
+public record DigitalBoardMemberIntelligenceResponse(
+        Long id,
+        String title,
+        String boardAgenda,
+        String strategicOversight,
+        String financialStewardship,
+        String riskGovernance,
+        String technologyOversight,
+        String aiGovernance,
+        String cybersecurityOversight,
+        String stakeholderAlignment,
+        String executiveAccountability,
+        String boardRecommendations,
+        Double boardAgendaScore,
+        Double strategicOversightScore,
+        Double financialStewardshipScore,
+        Double riskGovernanceScore,
+        Double technologyOversightScore,
+        Double aiGovernanceScore,
+        Double cybersecurityOversightScore,
+        Double stakeholderAlignmentScore,
+        Double executiveAccountabilityScore,
+        Double digitalBoardMemberIntelligenceScore,
+        DigitalBoardMemberPriority priority,
+        DigitalBoardMemberStatus status,
+        String createdBy,
+        String reviewedBy,
+        LocalDateTime reviewedAt,
+        String decidedBy,
+        LocalDateTime decidedAt,
+        String publishedBy,
+        LocalDateTime publishedAt,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
+) {}
