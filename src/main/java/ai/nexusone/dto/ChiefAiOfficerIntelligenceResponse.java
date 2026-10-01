@@ -1,0 +1,41 @@
+package ai.nexusone.dto;
+
+import ai.nexusone.enums.ChiefAiOfficerPriority;
+import ai.nexusone.enums.ChiefAiOfficerStatus;
+import java.time.LocalDateTime;
+
+public record ChiefAiOfficerIntelligenceResponse(
+        Long id,
+        String title,
+        String aiStrategy,
+        String governanceOutlook,
+        String responsibleAiPlan,
+        String platformModernizationPlan,
+        String adoptionRoadmap,
+        String workforceTransformationPlan,
+        String dataReadinessAssessment,
+        String aiRiskAssessment,
+        String valueRealizationPlan,
+        String strategicRecommendations,
+        Double aiStrategyScore,
+        Double governanceScore,
+        Double responsibleAiScore,
+        Double platformMaturityScore,
+        Double adoptionScore,
+        Double workforceReadinessScore,
+        Double dataReadinessScore,
+        Double aiRiskManagementScore,
+        Double valueRealizationScore,
+        Double chiefAiOfficerIntelligenceScore,
+        ChiefAiOfficerPriority priority,
+        ChiefAiOfficerStatus status,
+        String createdBy,
+        String reviewedBy,
+        LocalDateTime reviewedAt,
+        String decidedBy,
+        LocalDateTime decidedAt,
+        String publishedBy,
+        LocalDateTime publishedAt,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
+) {}
