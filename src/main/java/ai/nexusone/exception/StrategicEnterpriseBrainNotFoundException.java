@@ -1,0 +1,1 @@
+package ai.nexusone.exception; public class StrategicEnterpriseBrainNotFoundException extends RuntimeException { public StrategicEnterpriseBrainNotFoundException(Long id){super("Strategic Enterprise Brain report not found: "+id);} }
