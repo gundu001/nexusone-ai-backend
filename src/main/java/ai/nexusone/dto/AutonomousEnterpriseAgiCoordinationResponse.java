@@ -1,0 +1,40 @@
+package ai.nexusone.dto;
+
+import ai.nexusone.enums.*;
+import java.time.LocalDateTime;
+
+public record AutonomousEnterpriseAgiCoordinationResponse(
+        Long id,
+        String title,
+        String agentCoordination,
+        String goalOrchestration,
+        String taskDelegation,
+        String sharedContext,
+        String reasoningAlignment,
+        String conflictResolution,
+        String humanOversight,
+        String safetyGovernance,
+        String outcomeSynchronization,
+        String coordinationRecommendations,
+        Double agentCoordinationScore,
+        Double goalOrchestrationScore,
+        Double taskDelegationScore,
+        Double sharedContextScore,
+        Double reasoningAlignmentScore,
+        Double conflictResolutionScore,
+        Double humanOversightScore,
+        Double safetyGovernanceScore,
+        Double outcomeSynchronizationScore,
+        Double autonomousEnterpriseAgiCoordinationScore,
+        AutonomousEnterpriseAgiCoordinationPriority priority,
+        AutonomousEnterpriseAgiCoordinationStatus status,
+        String createdBy,
+        String reviewedBy,
+        LocalDateTime reviewedAt,
+        String decidedBy,
+        LocalDateTime decidedAt,
+        String publishedBy,
+        LocalDateTime publishedAt,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
+) {}
