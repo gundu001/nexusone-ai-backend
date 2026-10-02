@@ -1,0 +1,40 @@
+package ai.nexusone.dto;
+
+import ai.nexusone.enums.*;
+import java.time.LocalDateTime;
+
+public record AutonomousEnterpriseConsciousnessResponse(
+        Long id,
+        String title,
+        String enterpriseAwareness,
+        String contextUnderstanding,
+        String decisionMemory,
+        String reasoningIntelligence,
+        String adaptiveLearning,
+        String predictiveAwareness,
+        String selfOptimization,
+        String goalAlignment,
+        String strategicConsciousness,
+        String consciousnessRecommendations,
+        Double enterpriseAwarenessScore,
+        Double contextUnderstandingScore,
+        Double decisionMemoryScore,
+        Double reasoningIntelligenceScore,
+        Double adaptiveLearningScore,
+        Double predictiveAwarenessScore,
+        Double selfOptimizationScore,
+        Double goalAlignmentScore,
+        Double strategicConsciousnessScore,
+        Double autonomousEnterpriseConsciousnessScore,
+        AutonomousEnterpriseConsciousnessPriority priority,
+        AutonomousEnterpriseConsciousnessStatus status,
+        String createdBy,
+        String reviewedBy,
+        LocalDateTime reviewedAt,
+        String decidedBy,
+        LocalDateTime decidedAt,
+        String publishedBy,
+        LocalDateTime publishedAt,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
+) {}
