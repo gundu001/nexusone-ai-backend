@@ -1,0 +1,23 @@
+package ai.nexusone.dto;
+import ai.nexusone.enums.*; import java.time.LocalDateTime;
+public record AutonomousEnterpriseReasoningResponse(Long id,String title,
+ String causalReasoning,
+ String multiStepReasoning,
+ String strategicReasoning,
+ String operationalReasoning,
+ String predictiveReasoning,
+ String decisionJustification,
+ String adaptiveReasoning,
+ String goalDrivenReasoning,
+ String enterpriseKnowledgeReasoning,
+ String reasoningRecommendations,
+ Double causalReasoningScore,
+ Double multiStepReasoningScore,
+ Double strategicReasoningScore,
+ Double operationalReasoningScore,
+ Double predictiveReasoningScore,
+ Double decisionJustificationScore,
+ Double adaptiveReasoningScore,
+ Double goalDrivenReasoningScore,
+ Double enterpriseKnowledgeReasoningScore,
+ Double autonomousEnterpriseReasoningScore,AutonomousEnterpriseReasoningPriority priority,AutonomousEnterpriseReasoningStatus status,String createdBy,String reviewedBy,LocalDateTime reviewedAt,String decidedBy,LocalDateTime decidedAt,String publishedBy,LocalDateTime publishedAt,LocalDateTime createdAt,LocalDateTime updatedAt) {}

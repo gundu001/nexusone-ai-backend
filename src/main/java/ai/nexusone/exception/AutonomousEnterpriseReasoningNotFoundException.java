@@ -1,0 +1,1 @@
+package ai.nexusone.exception; public class AutonomousEnterpriseReasoningNotFoundException extends RuntimeException{public AutonomousEnterpriseReasoningNotFoundException(Long id){super("Autonomous Enterprise Reasoning report not found: "+id);}}
