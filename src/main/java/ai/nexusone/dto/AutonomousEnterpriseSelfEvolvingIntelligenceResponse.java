@@ -1,0 +1,23 @@
+package ai.nexusone.dto;
+import ai.nexusone.enums.*; import java.time.LocalDateTime;
+public record AutonomousEnterpriseSelfEvolvingIntelligenceResponse(Long id,String title,
+ String learningVelocity,
+ String adaptationCapacity,
+ String modelEvolution,
+ String knowledgeExpansion,
+ String feedbackIntegration,
+ String capabilityEmergence,
+ String governanceAlignment,
+ String safetyPreservation,
+ String outcomeImprovement,
+ String evolutionRecommendations,
+ Double learningVelocityScore,
+ Double adaptationCapacityScore,
+ Double modelEvolutionScore,
+ Double knowledgeExpansionScore,
+ Double feedbackIntegrationScore,
+ Double capabilityEmergenceScore,
+ Double governanceAlignmentScore,
+ Double safetyPreservationScore,
+ Double outcomeImprovementScore,
+ Double autonomousEnterpriseSelfEvolvingIntelligenceScore,AutonomousEnterpriseSelfEvolvingIntelligencePriority priority,AutonomousEnterpriseSelfEvolvingIntelligenceStatus status,String createdBy,String reviewedBy,LocalDateTime reviewedAt,String decidedBy,LocalDateTime decidedAt,String publishedBy,LocalDateTime publishedAt,LocalDateTime createdAt,LocalDateTime updatedAt) {}

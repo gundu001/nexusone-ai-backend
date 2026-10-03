@@ -1,0 +1,1 @@
+package ai.nexusone.exception; public class AutonomousEnterpriseSelfEvolvingIntelligenceNotFoundException extends RuntimeException{public AutonomousEnterpriseSelfEvolvingIntelligenceNotFoundException(Long id){super("Self-Evolving Intelligence report not found: "+id);}}

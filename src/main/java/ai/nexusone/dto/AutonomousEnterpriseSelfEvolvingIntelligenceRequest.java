@@ -1,0 +1,23 @@
+package ai.nexusone.dto;
+import ai.nexusone.enums.AutonomousEnterpriseSelfEvolvingIntelligencePriority; import jakarta.validation.constraints.*;
+public record AutonomousEnterpriseSelfEvolvingIntelligenceRequest(@NotBlank String title,
+ @NotBlank String learningVelocity,
+ @NotBlank String adaptationCapacity,
+ @NotBlank String modelEvolution,
+ @NotBlank String knowledgeExpansion,
+ @NotBlank String feedbackIntegration,
+ @NotBlank String capabilityEmergence,
+ @NotBlank String governanceAlignment,
+ @NotBlank String safetyPreservation,
+ @NotBlank String outcomeImprovement,
+ @NotBlank String evolutionRecommendations,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double learningVelocityScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double adaptationCapacityScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double modelEvolutionScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double knowledgeExpansionScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double feedbackIntegrationScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double capabilityEmergenceScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double governanceAlignmentScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double safetyPreservationScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double outcomeImprovementScore,
+ @NotNull AutonomousEnterpriseSelfEvolvingIntelligencePriority priority, @NotBlank String createdBy) {}
