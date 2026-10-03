@@ -1,0 +1,11 @@
+package ai.nexusone.repository;
+import ai.nexusone.entity.AutonomousEnterpriseCollectiveIntelligenceReport;
+import ai.nexusone.enums.*;
+import org.springframework.data.domain.*;
+import org.springframework.data.jpa.repository.JpaRepository;
+public interface AutonomousEnterpriseCollectiveIntelligenceRepository extends JpaRepository<AutonomousEnterpriseCollectiveIntelligenceReport,Long>{
+ long countByStatus(AutonomousEnterpriseCollectiveIntelligenceStatus s);
+ Page<AutonomousEnterpriseCollectiveIntelligenceReport> findByStatus(AutonomousEnterpriseCollectiveIntelligenceStatus s,Pageable p);
+ Page<AutonomousEnterpriseCollectiveIntelligenceReport> findByPriority(AutonomousEnterpriseCollectiveIntelligencePriority p,Pageable x);
+ Page<AutonomousEnterpriseCollectiveIntelligenceReport> findByTitleContainingIgnoreCaseOrHumanExpertiseContainingIgnoreCaseOrCollectiveRecommendationsContainingIgnoreCase(String a,String b,String c,Pageable p);
+}
