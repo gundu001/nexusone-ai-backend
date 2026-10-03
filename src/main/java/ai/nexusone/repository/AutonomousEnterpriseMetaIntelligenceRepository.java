@@ -1,0 +1,11 @@
+package ai.nexusone.repository;
+import ai.nexusone.entity.AutonomousEnterpriseMetaIntelligenceReport;
+import ai.nexusone.enums.*;
+import org.springframework.data.domain.*;
+import org.springframework.data.jpa.repository.JpaRepository;
+public interface AutonomousEnterpriseMetaIntelligenceRepository extends JpaRepository<AutonomousEnterpriseMetaIntelligenceReport,Long>{
+ long countByStatus(AutonomousEnterpriseMetaIntelligenceStatus s);
+ Page<AutonomousEnterpriseMetaIntelligenceReport> findByStatus(AutonomousEnterpriseMetaIntelligenceStatus s,Pageable p);
+ Page<AutonomousEnterpriseMetaIntelligenceReport> findByPriority(AutonomousEnterpriseMetaIntelligencePriority p,Pageable x);
+ Page<AutonomousEnterpriseMetaIntelligenceReport> findByTitleContainingIgnoreCaseOrIntelligenceAssessmentContainingIgnoreCaseOrMetaRecommendationsContainingIgnoreCase(String a,String b,String c,Pageable p);
+}
