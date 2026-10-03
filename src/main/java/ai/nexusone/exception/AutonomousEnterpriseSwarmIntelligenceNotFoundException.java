@@ -1,0 +1,1 @@
+package ai.nexusone.exception; public class AutonomousEnterpriseSwarmIntelligenceNotFoundException extends RuntimeException{public AutonomousEnterpriseSwarmIntelligenceNotFoundException(Long id){super("Swarm Intelligence report not found: "+id);}}

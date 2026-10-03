@@ -1,0 +1,23 @@
+package ai.nexusone.dto;
+import ai.nexusone.enums.AutonomousEnterpriseSwarmIntelligencePriority; import jakarta.validation.constraints.*;
+public record AutonomousEnterpriseSwarmIntelligenceRequest(@NotBlank String title,
+ @NotBlank String agentCoordination,
+ @NotBlank String taskDistribution,
+ @NotBlank String modelSwarm,
+ @NotBlank String emergentBehavior,
+ @NotBlank String collectiveProblemSolving,
+ @NotBlank String resourceOptimization,
+ @NotBlank String communicationEfficiency,
+ @NotBlank String resilience,
+ @NotBlank String autonomousExecution,
+ @NotBlank String swarmRecommendations,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double agentCoordinationScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double taskDistributionScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double modelSwarmScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double emergentBehaviorScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double collectiveProblemSolvingScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double resourceOptimizationScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double communicationEfficiencyScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double resilienceScore,
+ @NotNull @DecimalMin("0") @DecimalMax("100") Double autonomousExecutionScore,
+ @NotNull AutonomousEnterpriseSwarmIntelligencePriority priority, @NotBlank String createdBy) {}

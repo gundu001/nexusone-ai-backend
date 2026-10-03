@@ -1,0 +1,23 @@
+package ai.nexusone.dto;
+import ai.nexusone.enums.*; import java.time.LocalDateTime;
+public record AutonomousEnterpriseSwarmIntelligenceResponse(Long id,String title,
+ String agentCoordination,
+ String taskDistribution,
+ String modelSwarm,
+ String emergentBehavior,
+ String collectiveProblemSolving,
+ String resourceOptimization,
+ String communicationEfficiency,
+ String resilience,
+ String autonomousExecution,
+ String swarmRecommendations,
+ Double agentCoordinationScore,
+ Double taskDistributionScore,
+ Double modelSwarmScore,
+ Double emergentBehaviorScore,
+ Double collectiveProblemSolvingScore,
+ Double resourceOptimizationScore,
+ Double communicationEfficiencyScore,
+ Double resilienceScore,
+ Double autonomousExecutionScore,
+ Double autonomousEnterpriseSwarmIntelligenceScore,AutonomousEnterpriseSwarmIntelligencePriority priority,AutonomousEnterpriseSwarmIntelligenceStatus status,String createdBy,String reviewedBy,LocalDateTime reviewedAt,String decidedBy,LocalDateTime decidedAt,String publishedBy,LocalDateTime publishedAt,LocalDateTime createdAt,LocalDateTime updatedAt) {}
