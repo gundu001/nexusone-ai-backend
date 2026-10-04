@@ -1,0 +1,4 @@
+package ai.nexusone.repository;
+import ai.nexusone.entity.AutonomousEnterpriseAutonomousInnovation;
+import org.springframework.data.jpa.repository.*;
+public interface AutonomousEnterpriseAutonomousInnovationRepository extends JpaRepository<AutonomousEnterpriseAutonomousInnovation,Long>, JpaSpecificationExecutor<AutonomousEnterpriseAutonomousInnovation> {}
