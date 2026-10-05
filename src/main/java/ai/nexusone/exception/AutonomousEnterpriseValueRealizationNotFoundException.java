@@ -1,0 +1,1 @@
+package ai.nexusone.exception; public class AutonomousEnterpriseValueRealizationNotFoundException extends RuntimeException{public AutonomousEnterpriseValueRealizationNotFoundException(Long id){super("Value realization report not found: "+id);}}

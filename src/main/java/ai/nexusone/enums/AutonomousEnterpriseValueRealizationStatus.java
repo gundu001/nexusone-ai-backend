@@ -1,0 +1,1 @@
+package ai.nexusone.enums; public enum AutonomousEnterpriseValueRealizationStatus { GENERATED, REVIEWED, APPROVED, REJECTED, PUBLISHED }

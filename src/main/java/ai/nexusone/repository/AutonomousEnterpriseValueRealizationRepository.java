@@ -1,0 +1,1 @@
+package ai.nexusone.repository; import ai.nexusone.entity.AutonomousEnterpriseValueRealization; import org.springframework.data.jpa.repository.*; public interface AutonomousEnterpriseValueRealizationRepository extends JpaRepository<AutonomousEnterpriseValueRealization,Long>,JpaSpecificationExecutor<AutonomousEnterpriseValueRealization> {}
