@@ -1,0 +1,1 @@
+package ai.nexusone.repository; import ai.nexusone.entity.AutonomousEnterpriseStrategicGrowth; import org.springframework.data.jpa.repository.*; public interface AutonomousEnterpriseStrategicGrowthRepository extends JpaRepository<AutonomousEnterpriseStrategicGrowth,Long>,JpaSpecificationExecutor<AutonomousEnterpriseStrategicGrowth> {}

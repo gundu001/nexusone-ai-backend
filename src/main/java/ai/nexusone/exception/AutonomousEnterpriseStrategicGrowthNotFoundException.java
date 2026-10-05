@@ -1,0 +1,1 @@
+package ai.nexusone.exception; public class AutonomousEnterpriseStrategicGrowthNotFoundException extends RuntimeException { public AutonomousEnterpriseStrategicGrowthNotFoundException(Long id){super("Strategic growth report not found: "+id);}}
