@@ -1,0 +1,1 @@
+package ai.nexusone.repository; import ai.nexusone.entity.AutonomousEnterprisePortfolioOptimization; import org.springframework.data.jpa.repository.*; public interface AutonomousEnterprisePortfolioOptimizationRepository extends JpaRepository<AutonomousEnterprisePortfolioOptimization,Long>,JpaSpecificationExecutor<AutonomousEnterprisePortfolioOptimization> {}

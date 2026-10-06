@@ -1,0 +1,1 @@
+package ai.nexusone.exception; public class AutonomousEnterprisePortfolioOptimizationNotFoundException extends RuntimeException{public AutonomousEnterprisePortfolioOptimizationNotFoundException(Long id){super("Value realization report not found: "+id);}}

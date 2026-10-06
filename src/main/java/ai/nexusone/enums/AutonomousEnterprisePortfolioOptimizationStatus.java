@@ -1,0 +1,1 @@
+package ai.nexusone.enums; public enum AutonomousEnterprisePortfolioOptimizationStatus { GENERATED, REVIEWED, APPROVED, REJECTED, PUBLISHED }
