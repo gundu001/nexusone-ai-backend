@@ -1,0 +1,4 @@
+package ai.nexusone.repository;
+import ai.nexusone.entity.AutonomousEnterpriseInvestmentStrategy;
+import org.springframework.data.jpa.repository.*;
+public interface AutonomousEnterpriseInvestmentStrategyRepository extends JpaRepository<AutonomousEnterpriseInvestmentStrategy,Long>, JpaSpecificationExecutor<AutonomousEnterpriseInvestmentStrategy> {}
